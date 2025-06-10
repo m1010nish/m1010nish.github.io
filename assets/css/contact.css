@@ -1,0 +1,52 @@
+/* contact.css */
+/* Styles scoped for contact.html */
+
+.contact-form {
+    background: var(--background-secondary);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-light);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contact-form label {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px 12px;
+    border-radius: var(--border-radius-small);
+    border: 1px solid var(--border-color);
+    font-size: 14px;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 2px rgba(10, 102, 194, 0.2);
+    background-color: var(--background-secondary);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn {
+    align-self: flex-start;
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Manish Kumar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+        <i class="fas fa-sun sun-icon"></i>
+        <i class="fas fa-moon moon-icon"></i>
+    </button>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">M1010NISH</a>
+            <ul class="nav-menu">
+                <li><a href="#" onclick="openPage('index')">Home</a></li>
+                <li><a href="#" class="active">About</a></li>
+                <li><a href="#" onclick="openPage('experience')">Experience</a></li>
+                <li><a href="#" onclick="openPage('projects')">Projects</a></li>
+                <li><a href="#" onclick="openPage('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Section -->
+        <div class="main-content">
+            <!-- About Hero Section -->
+            <div class="profile-card">
+                <div class="cover-photo">
+                    <div class="profile-photo"></div>
+                </div>
+                <div class="profile-info">
+                    <h1 class="profile-name">About Manish Kumar</h1>
+                    <p class="profile-headline">Passionate Data Scientist & Full-Stack Developer</p>
+                </div>
+            </div>
+
+            <!-- About Content -->
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3>Professional Summary</h3>
+                </div>
+                <div class="about-content">
+                    <p class="about-intro">
+                        I'm a dedicated Data Science professional with a passion for transforming raw data into actionable insights. 
+                        With expertise in machine learning, statistical analysis, and full-stack development, I bridge the gap 
+                        between complex data science concepts and practical business solutions.
+                    </p>
+                    
+                    <div class="about-grid">
+                        <div class="about-section">
+                            <h4><i class="fas fa-chart-line"></i> Data Science Expertise</h4>
+                            <p>
+                                Proficient in Python, R, and SQL with extensive experience in machine learning algorithms, 
+                                statistical modeling, and data visualization. I specialize in predictive analytics, 
+                                natural language processing, and deep learning applications.
+                            </p>
+                        </div>
+                        
+                        <div class="about-section">
+                            <h4><i class="fas fa-code"></i> Development Skills</h4>
+                            <p>
+                                Full-stack development capabilities with modern frameworks including React, Node.js, 
+                                and Django. Experience in building scalable web applications, APIs, and data pipelines 
+                                that serve millions of users.
+                            </p>
+                        </div>
+                        
+                        <div class="about-section">
+                            <h4><i class="fas fa-lightbulb"></i> Problem Solving</h4>
+                            <p>
+                                Strong analytical mindset with the ability to break down complex business problems 
+                                into manageable components. I enjoy finding innovative solutions that deliver 
+                                measurable business value.
+                            </p>
+                        </div>
+                        
+                        <div class="about-section">
+                            <h4><i class="fas fa-users"></i> Collaboration</h4>
+                            <p>
+                                Excellent communication skills with experience working in cross-functional teams. 
+                                I can effectively translate technical concepts to non-technical stakeholders and 
+                                collaborate with diverse teams.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3>Technical Skills</h3>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4>Programming Languages</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                                <div class="skill-level" data-level="95"></div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript</span>
+                                <div class="skill-level" data-level="88"></div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database"></i>
+                                <span>SQL</span>
+                                <div class="skill-level" data-level="92"></div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-r-project"></i>
+                                <span>R</span>
+                                <div class="skill-level" data-level="78"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Frameworks & Libraries</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                                <div class="skill-level" data-level="90"></div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
+                                <div class="skill-level" data-level="85"></div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-brain"></i>
+                                <span>TensorFlow</span>
+                                <div class="skill-level" data-level="82"></div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Pandas</span>
+                                <div class="skill-level" data-level="94"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Tools & Technologies</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-docker"></i>
+                                <span>Docker</span>
+                                <div class="skill-level" data-level="80"></div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-aws"></i>
+                                <span>AWS</span>
+                                <div class="skill-level" data-level="75"></div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                                <div class="skill-level" data-level="88"></div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database"></i>
+                                <span>MongoDB</span>
+                                <div class="skill-level" data-level="83"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3>Education & Certifications</h3>
+                </div>
+                <div class="education-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Master of Computer Applications</h4>
+                            <p class="institution">Tripura University</p>
+                            <p class="duration">2022 - 2024</p>
+                            <p class="description">
+                                Specialized in Data Science and Machine Learning. Graduated with distinction 
+                                and completed capstone project on predictive analytics for healthcare data.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Bachelor of Computer Applications</h4>
+                            <p class="institution">Babasaheb Bhimrao Ambedkar University</p>
+                            <p class="duration">2019 - 2022</p>
+                            <p class="description">
+                                Comprehensive program covering Python, SQL, data visualization, machine learning, 
+                                and data analysis methodologies.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Higher Secondary (Information Technologies)</h4>
+                            <p class="institution">Jawahar Navodaya Vidyalaya</p>
+                            <p class="duration">2017 - 2019</p>
+                            <p class="description">
+                                Certified in developing and maintaining applications on AWS platform with 
+                                focus on serverless architectures and cloud-native solutions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interests Section -->
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3>Interests & Hobbies</h3>
+                </div>
+                <div class="interests-grid">
+                    <div class="interest-item">
+                        <i class="fas fa-robot"></i>
+                        <h4>Artificial Intelligence</h4>
+                        <p>Exploring the latest developments in AI and machine learning research</p>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-camera"></i>
+                        <h4>Photography</h4>
+                        <p>Capturing moments and exploring creative composition techniques</p>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-book"></i>
+                        <h4>Reading</h4>
+                        <p>Technical books, science fiction, and business strategy publications</p>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-hiking"></i>
+                        <h4>Hiking</h4>
+                        <p>Exploring nature trails and maintaining work-life balance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Quick Stats -->
+            <div class="sidebar-card">
+                <h4>Quick Stats</h4>
+                <div class="stat-item">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Technologies Mastered</span>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="sidebar-card">
+                <h4>Get In Touch</h4>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:manishsinghjnv11@gmail.com">manishsinghjnv11@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 8540868767</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>New Delhi, India</span>
+                </div>
+            </div>
+
+            <!-- Download Resume -->
+            <div class="sidebar-card">
+                <h4>Resume</h4>
+                <button class="btn btn-primary" onclick="downloadResume()" style="width: 100%;">
+                    <i class="fas fa-download"></i> Download Resume
+                </button>
+            </div>
+
+            <!-- Social Links -->
+            <div class="sidebar-card">
+                <h4>Connect With Me</h4>
+                <div class="social-links-grid">
+                    <a href="https://linkedin.com/in/m1010nish" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/m1010nish" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:manishsinghjnv11@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

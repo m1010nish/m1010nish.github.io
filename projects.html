@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Manish Kumar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+</head>
+<body>
+    <!-- Dark/Light Mode Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+        <i class="fas fa-sun sun-icon"></i>
+        <i class="fas fa-moon moon-icon"></i>
+    </button>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">M1010NISH</a>
+            <ul class="nav-menu">
+                <li><a href="#" onclick="openPage('index')">Home</a></li>
+                <li><a href="#" onclick="openPage('about')">About</a></li>
+                <li><a href="#" onclick="openPage('experience')">Experience</a></li>
+                <li><a href="#" class="active">Projects</a></li>
+                <li><a href="#" onclick="openPage('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Section -->
+        <div class="main-content">
+            <!-- Projects Header -->
+            <div class="profile-card">
+                <div class="projects-header">
+                    <h1 class="profile-name">My Projects</h1>
+                    <p class="profile-headline">A showcase of my technical expertise and creative problem-solving</p>
+                    
+                    <!-- Filter Buttons -->
+                    <div class="project-filters">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
+                        <button class="filter-btn" data-filter="data-science">Data Science</button>
+                        <button class="filter-btn" data-filter="web-dev">Web Development</button>
+                        <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
+                        <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Projects -->
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3><i class="fas fa-star"></i> Featured Projects</h3>
+                </div>
+                <div class="featured-projects">
+                    <div class="featured-project" data-category="data-science machine-learning">
+                        <div class="project-image-large">
+                            <img src="/api/placeholder/600/300" alt="AI Healthcare Analytics">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                    <a href="#" class="btn btn-secondary"><i class="fab fa-github"></i> Source Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <div class="project-meta">
+                                <span class="project-category">Data Science</span>
+                                <span class="project-date">2024</span>
+                            </div>
+                            <h3>AI-Powered Healthcare Analytics Platform</h3>
+                            <p class="project-description">
+                                A comprehensive healthcare analytics platform that uses machine learning to predict patient outcomes, 
+                                analyze treatment effectiveness, and optimize resource allocation. Built with Python, TensorFlow, 
+                                and React, serving over 10,000 patient records.
+                            </p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">AWS</span>
+                            </div>
+                            <div class="project-stats">
+                                <div class="stat">
+                                    <i class="fas fa-users"></i>
+                                    <span>5K+ Users</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-database"></i>
+                                    <span>1M+ Records</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>95% Accuracy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All Projects Grid -->
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3><i class="fas fa-code"></i> All Projects</h3>
+                    <div class="projects-count">
+                        <span id="projects-count">12</span> Projects
+                    </div>
+                </div>
+                
+                <div class="projects-grid-large" id="projects-container">
+                    <!-- Data Science Projects -->
+                    <div class="project-card-large" data-category="data-science">
+                        <div class="project-image">
+                            <img src="/api/placeholder/350/200" alt="Weather Prediction Model">
+                            <div class="project-badge">Data Science</div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Weather Prediction Model</h4>
+                            <p>Advanced weather forecasting system using ensemble methods and deep learning to predict weather patterns with 92% accuracy.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                                <span class="tech-tag">LSTM</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-large" data-category="web-dev">
+                        <div class="project-image">
+                            <img src="/api/placeholder/350/200" alt="E-commerce Platform">
+                            <div class="project-badge">Web Development</div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Full-Stack E-commerce Platform</h4>
+                            <p>Modern e-commerce solution with real-time inventory, payment processing, and advanced analytics dashboard.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Stripe</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-large" data-category="machine-learning">
+                        <div class="project-image">
+                            <img src="/api/placeholder/350/200" alt="NLP Sentiment Analysis">
+                            <div class="project-badge">Machine Learning</div>
+                        </div>
+                        <div class="project-content">
+                            <h4>NLP Sentiment Analysis Tool</h4>
+                            <p>Real-time sentiment analysis of social media content using transformer models and custom neural networks.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">BERT</span>
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">FastAPI</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-large" data-category="data-science">
+                        <div class="project-image">
+                            <img src="/api/placeholder/350/200" alt="Stock Market Predictor">
+                            <div class="project-badge">Data Science</div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Stock Market Prediction System</h4>
+                            <p>AI-driven stock market analysis tool using technical indicators, news sentiment, and machine learning algorithms.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">Prophet</span>
+                                <span class="tech-tag">Plotly</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-large" data-category="web-dev">
+                        <div class="project-image">
+                            <img src="/api/placeholder/350/200" alt="Task Management App">
+                            <div class="project-badge">Web Development</div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Team Collaboration Platform</h4>
+                            <p>Real-time team collaboration tool with project management, video calls, and advanced reporting features.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Socket.io</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">Redis</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-large" data-category="mobile">
+                        <div class="project-image">
+                            <img src="/api/placeholder/350/200" alt="Fitness Tracking App">
+                            <div class="project-badge">Mobile App</div>
+                        </div>
+                        <div class="project-content">
+                            <h4>AI Fitness Tracking App</h4>
+                            <p>Smart fitness tracking application with computer vision for exercise form correction and personalized workout plans.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">TensorFlow Lite</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">OpenCV</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-large" data-category="machine-learning">
+                        <div class="project-image">
+                            <img src="/api/placeholder/350/200" alt="Image Recognition System">
+                            <div class="project-badge">Machine Learning</div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Medical Image Classification</h4>
+                            <p>Deep learning system for automated medical image analysis and disease detection with 98% accuracy rate.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">CNN</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">Flask</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-large" data-category="web-dev">
+                        <div class="project-image">
+                            <img src="/api/placeholder/350/200" alt="CMS Platform">
+                            <div class="project-badge">Web Development</div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Headless CMS Platform</h4>
+                            <p>Modern content management system with GraphQL API, real-time updates, and multi-tenant architecture.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">GraphQL</span>
+                                <span class="tech-tag">Prisma</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-large" data-category="data-science">
+                        <div class="project-image">
+                            <img src="/api/placeholder/350/200" alt="Customer Analytics">
+                            <div class="project-badge">Data Science</div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Customer Behavior Analytics</h4>
+                            <p>Advanced customer segmentation and behavior prediction system using clustering algorithms and predictive modeling.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">K-Means</span>
+                                <span class="tech-tag">Tableau</span>
+                                <span class="tech-tag">Apache Spark</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-large" data-category="web-dev">
+                        <div class="project-image">
+                            <img src="/api/placeholder/350/200" alt="Real Estate Platform">
+                            <div class="project-badge">Web Development</div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Real Estate Marketplace</h4>
+                            <p>Comprehensive real estate platform with virtual tours, mortgage calculator, and AI-powered property recommendations.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Three.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-large" data-category="machine-learning">
+                        <div class="project-image">
+                            <img src="/api/placeholder/350/200" alt="Recommendation Engine">
+                            <div class="project-badge">Machine Learning</div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Personalized Recommendation Engine</h4>
+                            <p>Hybrid recommendation system using collaborative filtering and content-based approaches for e-commerce personalization.</p>
+                            <div class="project-technologies">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Surprise</span>
+                                <span class="tech-tag">MLflow</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-section">
+                    <button class="btn btn-secondary load-more-btn" id="load-more">
+                        <i class="fas fa-plus"></i> Load More Projects
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Project Statistics -->
+            <div class="sidebar-card">
+                <h4>Project Statistics</h4>
+                <div class="stat-item">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Total Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Technologies Used</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">Lines of Code</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+            </div>
+
+            <!-- Technologies -->
+            <div class="sidebar-card">
+                <h4>Technologies I Use</h4>
+                <div class="tech-cloud">
+                    <span class="tech-item large">Python</span>
+                    <span class="tech-item medium">JavaScript</span>
+                    <span class="tech-item large">React</span>
+                    <span class="tech-item small">Vue.js</span>
+                    <span class="tech-item medium">Node.js</span>
+                    <span class="tech-item large">TensorFlow</span>
+                    <span class="tech-item small">PyTorch</span>
+                    <span class="tech-item medium">MongoDB</span>
+                    <span class="tech-item small">PostgreSQL</span>
+                    <span class="tech-item medium">AWS</span>
+                    <span class="tech-item small">Docker</span>
+                    <span class="tech-item medium">Git</span>
+                </div>
+            </div>
+
+            <!-- GitHub Stats -->
+            <div class="sidebar-card">
+                <h4>GitHub Activity</h4>
+                <div class="github-stats">
+                    <div class="github-stat">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Commits this year</span>
+                        </div>
+                    </div>
+                    <div class="github-stat">
+                        <i class="fas fa-code-branch"></i>
+                        <div>
+                            <span class="stat-number">25</span>
+                            <span class="stat-label">Public repositories</span>
+                        </div>
+                    </div>
+                    <div class="github-stat">
+                        <i class="fas fa-star"></i>
+                        <div>
+                            <span class="stat-number">200+</span>
+                            <span class="stat-label">Stars received</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://github.com/m1010nish" class="btn btn-primary" target="_blank" style="width: 100%; margin-top: 16px;">
+                    <i class="fab fa-github"></i> View GitHub Profile
+                </a>
+            </div>
+
+            <!-- Contact for Projects -->
+            <div class="sidebar-card">
+                <h4>Work With Me</h4>
+                <p>Interested in collaborating on a project or need custom development solutions?</p>
+                <a href="contact.html" class="btn btn-primary" style="width: 100%; margin-top: 12px;">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

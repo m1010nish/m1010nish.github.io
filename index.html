@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manish Kumar - Professional Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <!-- Dark/Light Mode Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+        <i class="fas fa-sun sun-icon"></i>
+        <i class="fas fa-moon moon-icon"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">M1010NISH</a>
+            <ul class="nav-menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#" onclick="openPage('about')">About</a></li>
+                <li><a href="#" onclick="openPage('experience')">Experience</a></li>
+                <li><a href="#" onclick="openPage('projects')">Projects</a></li>
+                <li><a href="#" onclick="openPage('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Section -->
+        <div class="main-content">
+            <!-- Profile Card -->
+            <div class="profile-card">
+                <div class="cover-photo">
+                    <div class="profile-photo"></div>
+                </div>
+                <div class="profile-info">
+                    <h1 class="profile-name">Manish Kumar</h1>
+                    <p class="profile-headline">Data Science Intern | Freelance Data Analyst | Freelance Developer</p>
+                    <p class="profile-location">
+                        New Delhi, Delhi, India • <a href="#" onclick="showContactModal()">Contact info</a>
+                    </p>
+                    <div class="profile-buttons">
+                        <button class="btn btn-primary" onclick="downloadResume()">
+                            <i class="fas fa-download"></i> Download Resume
+                        </button>
+                        <button class="btn btn-secondary" onclick="showContactModal()">
+                            <i class="fas fa-envelope"></i> Message
+                        </button>
+                    </div>
+                    <div class="open-to-work">
+                        <h4>Open to work</h4>
+                        <p>Data Analyst, Data Science, and Software Development roles</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity Card -->
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3>Activity</h3>
+                    <div class="activity-tabs">
+                        <button class="tab-btn active" onclick="switchTab('projects')">Projects</button>
+                        <button class="tab-btn" onclick="switchTab('posts')">Posts</button>
+                        <button class="tab-btn" onclick="switchTab('articles')">Articles</button>
+                    </div>
+                </div>
+
+                <!-- Projects Content -->
+                <div id="projects-content" class="content-section active">
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('/api/placeholder/280/160')"></div>
+                            <div class="project-content">
+                                <h4 class="project-title">Weather Forecast App</h4>
+                                <p class="project-description">A responsive weather forecasting application with
+                                    real-time data integration using OpenWeather API.</p>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('/api/placeholder/280/160')"></div>
+                            <div class="project-content">
+                                <h4 class="project-title">Data Analytics Dashboard</h4>
+                                <p class="project-description">Interactive dashboard for business intelligence with
+                                    advanced data visualization using D3.js and Python.</p>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('/api/placeholder/280/160')"></div>
+                            <div class="project-content">
+                                <h4 class="project-title">E-commerce Platform</h4>
+                                <p class="project-description">Full-stack e-commerce solution with payment integration
+                                    and inventory management system.</p>
+                            </div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-image" style="background-image: url('/api/placeholder/280/160')"></div>
+                            <div class="project-content">
+                                <h4 class="project-title">Machine Learning Model</h4>
+                                <p class="project-description">Predictive analytics model for customer behavior analysis
+                                    using scikit-learn and TensorFlow.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="show-all-btn" onclick="openPage('projects')">
+                        Show all projects <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Posts Content -->
+                <div id="posts-content" class="content-section">
+                    <div class="posts-section">
+                        <h3>Recent Posts</h3>
+                        <p>Share your thoughts and insights with your network</p>
+                        <div style="margin-top: 24px;">
+                            <div class="project-card" style="text-align: left;">
+                                <div class="project-content">
+                                    <h4 class="project-title">The Future of Data Science</h4>
+                                    <p class="project-description">Exploring emerging trends in machine learning and
+                                        artificial intelligence that are shaping the industry...</p>
+                                    <small style="color: #666666; margin-top: 8px; display: block;">2 days ago • 15
+                                        likes • 8 comments</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tags Content -->
+                <div id="articles-content" class="content-section">
+                    <div class="articles-section">
+                        <h3>Featured Articles</h3>
+                        <p>Technical articles and insights</p>
+                        <div style="margin-top: 24px;">
+                            <div class="project-card" style="text-align: left;">
+                                <div class="project-content">
+                                    <h4 class="project-title">Building Scalable Data Pipelines</h4>
+                                    <p class="project-description">A comprehensive guide to designing and implementing
+                                        efficient data processing workflows...</p>
+                                    <small style="color: #666666; margin-top: 8px; display: block;">1 week ago • 42
+                                        views</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Analytics Card -->
+            <div class="sidebar-card">
+                <h4>Profile Analytics</h4>
+                <div class="analytics-item">
+                    <i class="fas fa-eye" style="color: #0a66c2;"></i>
+                    <span><span class="analytics-number" id="visit-count">156</span> profile views</span>
+                </div>
+                <div class="analytics-item">
+                    <i class="fas fa-chart-line" style="color: #0a66c2;"></i>
+                    <span><span class="analytics-number">89</span> post impressions</span>
+                </div>
+                <div class="analytics-item">
+                    <i class="fas fa-search" style="color: #0a66c2;"></i>
+                    <span><span class="analytics-number">12</span> search appearances</span>
+                </div>
+            </div>
+
+            <!-- Languages Card -->
+            <div class="sidebar-card">
+                <h4>Languages</h4>
+                <p><strong>English</strong> - Professional</p>
+                <p><strong>Hindi</strong> - Native</p>
+            </div>
+
+            <!-- Public Profile Card -->
+            <div class="sidebar-card">
+                <h4>Public Profile & URL</h4>
+                <a href="https://linkedin.com/in/m1010nish" class="url-link" target="_blank">
+                    linkedin.com/in/m1010nish
+                </a>
+            </div>
+
+            <!-- Skills Card -->
+            <div class="sidebar-card">
+                <h4>Top Skills</h4>
+                <p>Python • Data Analysis • Machine Learning</p>
+                <p>JavaScript • React • Node.js</p>
+                <p>SQL • MongoDB • Git</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="contact-modal" id="contactModal">
+        <div class="contact-card">
+            <button class="close-btn" onclick="hideContactModal()">&times;</button>
+            <div class="contact-content">
+                <div class="contact-photo"></div>
+                <h2 class="contact-name">Manish Kumar</h2>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 8540868767</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>manishsinghjnv11@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>New Delhi, Delhi, India</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/m1010nish" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/m1010nish" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:manishsinghjnv11@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        const path = 'm1010nish.netlify.app'; // change to a unique name for your site
+
+        fetch(`https://api.visitorbadge.io/api/visitors?path=${path}&format=json`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("visit-count").textContent = `${data.value}`;
+            })
+            .catch(err => {
+                console.error("Failed to load visit count", err);
+                document.getElementById("visit-count").textContent = "Unable to load visits.";
+            });
+    </script>
+</body>
+
+</html>

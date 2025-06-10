@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Manish Kumar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/experience.css">
+    <script type="module" src="assets/db/experience.js"></script>
+</head>
+<body>
+    <!-- Dark/Light Mode Toggle -->
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light mode">
+        <i class="fas fa-sun sun-icon"></i>
+        <i class="fas fa-moon moon-icon"></i>
+    </button>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">M1010NISH</a>
+            <ul class="nav-menu">
+                <li><a href="#" onclick="openPage('index')">Home</a></li>
+                <li><a href="#" onclick="openPage('about')">About</a></li>
+                <li><a href="#" class="active">Experience</a></li>
+                <li><a href="#" onclick="openPage('projects')">Projects</a></li>
+                <li><a href="#" onclick="openPage('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <div class="main-content">
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h3>Professional Experience</h3>
+                </div>
+                <div class="education-timeline" id="experience-timeline">
+                    <!--<div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Data Scientist Intern</h4>
+                            <p class="institution">DataSpoof EdTech Private Limited</p>
+                            <p class="duration">May 2024 - Aug 2024</p>
+                            <p class="description">
+                                Developed machine learning models for customer churn prediction, improved model accuracy by 12%, and integrated dashboards for stakeholder reporting.
+                            </p>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar (Same as About Page) -->
+        <div class="sidebar">
+            <div class="sidebar-card">
+                <h4>Quick Stats</h4>
+                <div class="analytics-item">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="analytics-item">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="analytics-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Technologies Mastered</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    </script>
+</body>
+</html>
