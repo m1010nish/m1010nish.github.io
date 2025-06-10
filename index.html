@@ -237,10 +237,11 @@
 
     <script src="assets/js/script.js"></script>
     <script>
-        const path = 'm1010nish.github.io'; // change to a unique name for your site
+        const namespace = "m1010nish.github.io";
+        const key = "index";
 
-        fetch(`https://api.visitorbadge.io/api/visitors?path=${path}&format=json`)
-            .then(response => response.json())
+        fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+            .then(res => res.json())
             .then(data => {
                 document.getElementById("visit-count").textContent = `${data.value}`;
             })
