@@ -257,9 +257,8 @@
     VisitorAPI(
         "FnAGKrmBxZtf2lpme6h4",
         function(data){
-            console.log(data);
-            // Assuming 'data.views' holds the view count
-            document.getElementById("visit-count").innerText = `Views: ${data.views}`;
+            console.log("API Response:", data); // Look here to find the correct field
+            document.getElementById("visit-count").innerText = `${data.total}`;
         },
         function(errorCode, errorMessage){
             console.error(errorCode, errorMessage);
