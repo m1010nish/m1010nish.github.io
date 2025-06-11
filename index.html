@@ -236,14 +236,38 @@
     </div>
 
     <script src="assets/js/script.js"></script>
-    <script>
-        var VisitorAPI=function(t,e,a){var s=new XMLHttpRequest;s.onreadystatechange=function(){var t;s.readyState===XMLHttpRequest.DONE&&(200===(t=JSON.parse(s.responseText)).status?e(t.data):a(t.status,t.result))},s.open("GET","https://api.visitorapi.com/api/?pid="+t),s.send(null)};
-        VisitorAPI(
-            "FnAGKrmBxZtf2lpme6h4",
-            function(data){console.log(data)},
-            function(errorCode, errorMessage){console.log(errorCode, errorMessage)}
-        );
-    </script>
+
+<script>
+    var VisitorAPI = function(t, e, a){
+        var s = new XMLHttpRequest;
+        s.onreadystatechange = function(){
+            if(s.readyState === XMLHttpRequest.DONE){
+                var response = JSON.parse(s.responseText);
+                if(response.status === 200){
+                    e(response.data);
+                } else {
+                    a(response.status, response.result);
+                }
+            }
+        };
+        s.open("GET", "https://api.visitorapi.com/api/?pid=" + t);
+        s.send(null);
+    };
+
+    VisitorAPI(
+        "FnAGKrmBxZtf2lpme6h4",
+        function(data){
+            console.log(data);
+            // Assuming 'data.views' holds the view count
+            document.getElementById("visit-count").innerText = `Views: ${data.views}`;
+        },
+        function(errorCode, errorMessage){
+            console.error(errorCode, errorMessage);
+            document.getElementById("visit-count").innerText = `Error loading views`;
+        }
+    );
+</script>
+
 </body>
 
 </html>
