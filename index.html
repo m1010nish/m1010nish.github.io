@@ -237,18 +237,42 @@
 
     <script src="assets/js/script.js"></script>
     <script>
-        const namespace = "m1010nish_github_io";
-        const key = "homepage";
+           async function updateViewCount() {
+     // Step 2: Read the JSON file
+     try {
+       const response = await fetch('/count.json'); // Assuming your server serves this file
+       const data = await response.json();
+       let currentCount = data.views;
 
-        fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-            .then(res => res.json())
-            .then(data => {
-                document.getElementById("visit-count").textContent = `${data.value}`;
-            })
-            .catch(err => {
-                console.error("Failed to load visit count", err);
-                document.getElementById("visit-count").textContent = "Unable to load visits.";
-            });
+       // Step 3: Increment and update
+       currentCount++;
+       const updatedData = { views: currentCount };
+
+       const updateResponse = await fetch('/count.json', {
+         method: 'PUT',
+         headers: {
+           'Content-Type': 'application/json'
+         },
+         body: JSON.stringify(updatedData)
+       });
+
+       if (updateResponse.ok) {
+         // Step 4: Display
+         displayViewCount(currentCount);
+       }
+     } catch (error) {
+       console.error("Error:", error);
+     }
+   }
+
+   function displayViewCount(count) {
+     //  Update your web page with the view count
+     document.getElementById('visit-count').textContent = count;
+   }
+
+   // Call this function when the page loads (or an event)
+   updateViewCount();
+
     </script>
 </body>
 
