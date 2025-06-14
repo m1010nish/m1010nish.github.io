@@ -238,7 +238,7 @@
     <script src="assets/js/script.js"></script>
 
 <script>
-    fetch("https://web-production-419fa.up.railway.app/increment-view")
+    fetch("https://view-counter-production.up.railway.app/increment-view")
         .then(response => response.json())
         .then(data => {
             document.getElementById("visit-count").textContent = data.views;
