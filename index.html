@@ -239,12 +239,11 @@
 
 <script>
     fetch("https://web-production-419fa.up.railway.app/increment-view")
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById("visit-count").textContent = data.views;
-            })
-            .catch(error => console.error("Error:", error));
-  });
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("visit-count").textContent = data.views;
+        })
+        .catch(error => console.error("Error:", error));
 </script>
 
 </body>
