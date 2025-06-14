@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="https://cdn.counter.dev/script.js" data-id="abc50705-4275-4b68-b636-ec06537545b8" data-utcoffset="6"></script>
 </head>
 
 <body>
@@ -239,10 +238,12 @@
     <script src="assets/js/script.js"></script>
 
 <script>
-    fetch("https://counter.dev/api/site/abc50705-4275-4b68-b636-ec06537545b8")
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("visit-count").innerText = data.total;
+    fetch("https://web-production-419fa.up.railway.app/increment-view")
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("visit-count").textContent = data.views;
+            })
+            .catch(error => console.error("Error:", error));
   });
 </script>
 
