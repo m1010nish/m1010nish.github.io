@@ -787,3 +787,16 @@ const styles = `
 
 // Inject styles
 document.head.insertAdjacentHTML('beforeend', styles);
+
+
+let x = document.querySelector("#visit-count");
+
+if (x.innerText=='0'){
+    let dots = 0;
+    const maxDots = 3;
+
+    const interval = setInterval(() => {
+        dots = (dots + 1) % (maxDots + 1);
+        x.innerText = '0' + '.'.repeat(dots);
+    }, 500);
+}
