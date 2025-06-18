@@ -8,7 +8,7 @@
 
     // Configuration
     const CONFIG = {
-        resumeUrl: "https://docs.google.com/gview?url=https://raw.githubusercontent.com/m1010nish/About-Me/main/Data_Resume_Manish.pdf&embedded=false",
+        resumeUrl: "https://docs.google.com/gview?url=https://raw.githubusercontent.com/m1010nish/m1010nish/main/Analyst_Manish.pdf&embedded=false",
         socialLinks: {
             linkedin: "https://linkedin.com/in/m1010nish",
             github: "https://github.com/m1010nish",
